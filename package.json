@@ -1,0 +1,27 @@
+{
+  "name": "graphql-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.9.16",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.3"
+  },
+  "scripts": {
+    "start": "nodemon  -r esm -r  module-alias/register app.js"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "nodemon": "^2.0.2"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@src": "src",
+    "@model": "src/database/models",
+    "@schema": "src/schema"
+  }
+}
