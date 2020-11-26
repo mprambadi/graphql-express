@@ -6,10 +6,27 @@ export default makeExecutableSchema({
       id: Int!
       title: String!
       content: String!
+      user: User
+    }
+
+    type Address {
+      id: Int!
+      address: String
+    }
+
+    type User {
+      id: Int!
+      username: String!
+      email: String!
+      posts: [Post]
+      addresses: [Address] 
     }
 
     type Query {
-     getPosts: [Post]
+      Users: [User]
+      User(id: Int): User
+      Posts: [Post]
+      Post(id: Int): Post
     }
-  `
+  `,
 });
